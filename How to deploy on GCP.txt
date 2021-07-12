@@ -1,0 +1,2 @@
+Point 1. Your main python file name should be main.py
+Point 2. create app.yaml write runtime: python37
