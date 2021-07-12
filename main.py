@@ -3,14 +3,14 @@ import flask
 from flask_cors import cross_origin
 import pickle
 
-application = Flask(__name__)
+app = Flask(__name__)
 
-@application.route('/',methods = ['GET'])
+@app.route('/',methods = ['GET'])
 @cross_origin()
 def home():
     return render_template('index.html')
 
-@application.route('/predict',methods = ['GET','POST'])
+@app.route('/predict',methods = ['GET','POST'])
 @cross_origin()
 def index():
     if request.method == 'POST':
@@ -37,4 +37,4 @@ def index():
             print('Error is: ',e)
 
 if __name__ == '__main__':
-    application.run(debug=True)
+    app.run(debug=True)
